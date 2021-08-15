@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-size: 16px;
+  font-family: "Be Vietnam", sans-serif;
+}
+header,
+nav,
+section {
+  display: block;
+}
+#page {
+  max-width: 1440;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 80px 5px 80px;
+  background-image: url("images/bg-simplify-section-desktop.svg");
+}
+@media screen and (max-width: 375px) {
+  #page {
+    max-width: 375px;
+    padding: 20px 10px 8px 10px;
+    background-image: url("images/bg-simplify-section-mobile.svg");
+  }
+}
+#page .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 375px) {
+  #page .header {
+    width: 100%;
+  }
+}
+#page .header .logo {
+  width: 120px;
+}
+#page .header .logo img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+#page .header nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 375px) {
+  #page .header nav {
+    display: none;
+  }
+}
+#page .header nav ul li {
+  margin-right: 15px;
+}
+#page .header nav ul li:last-child {
+  margin-right: 0;
+}
+#page .header nav ul li a {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(228, 39%, 23%);
+}
+#page .header nav ul li a:hover {
+  color: hsl(227, 12%, 61%);
+}
+#page .header .open button,
+#page .header .close button {
+  border: none;
+  outline: none;
+  background: none;
+  display: none;
+  justify-self: end;
+}
+@media screen and (max-width: 375px) {
+  #page .header .open button {
+    display: block;
+  }
+}
+/*this styles are applyed toall buttons*/
+#page .header .start button,
+#page #sec1 .greeding button,
+#page #sec3 .start button,
+#page footer .up .start button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  background-color: hsl(12, 88%, 59%);
+  border-radius: 20px;
+  padding: 8px 13px;
+  text-align: center;
+  color: hsl(0, 0%, 98%);
+  transition: 0.3s ease-in-out;
+}
+#page .header .start button:hover,
+#page #sec1 .greeding button:hover,
+#page #sec3 .start button:hover {
+  background-color: hsl(12, 88%, 59%, 0.7);
+}
+@media screen and (max-width: 375px) {
+  #page .header .start {
+    display: none;
+  }
+}
+#page .mobile-nav {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  #page .mobile-nav {
+    display: none;
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+    text-align: center;
+  }
+  #page .mobile-nav nav ul li {
+    display: block;
+  }
+  #page .mobile-nav nav ul li a {
+    display: block;
+    color: hsl(228, 39%, 23%);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  #page .mobile-nav nav ul li a:hover {
+    color: hsl(227, 12%, 61%);
+  }
+}
+
+#page #sec1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  #page #sec1 {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+}
+#page #sec1 > div:first-child {
+  width: 30%;
+}
+
+#page #sec1 > div:last-child {
+  width: 50%;
+}
+@media screen and (max-width: 375px) {
+  #page #sec1 > div:first-child {
+    width: 100%;
+  }
+  #page #sec1 > div:last-child {
+    width: 100%;
+  }
+}
+#page #sec1 .greeding h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+  margin-bottom: 15px;
+}
+/*styles for paragraph*/
+#page #sec1 .greeding p,
+#page #sec2 .disc p,
+#page #sec2 .articles .article div p,
+#page #sec3 .people .person p {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(227, 12%, 61%);
+  margin-bottom: 15px;
+}
+
+#page #sec1 .percent img {
+  width: 100%;
+}
+
+#page #sec2 {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  #page #sec2 {
+    display: block;
+  }
+}
+#page #sec2 > div:first-child {
+  width: 30%;
+}
+#page #sec2 > div:last-child {
+  width: 50%;
+}
+@media screen and (max-width: 375px) {
+  #page #sec2 > div:first-child,
+  #page #sec2 > div:last-child {
+    width: 100%;
+  }
+  #page #sec2 > div:first-child {
+    text-align: center;
+  }
+}
+#page #sec2 .disc h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+  margin-bottom: 15px;
+}
+
+#page #sec2 .articles .article {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+#page #sec2 .articles .article > p {
+  padding: 6px 15px;
+  border-radius: 15px;
+  background-color: hsl(12, 88%, 59%);
+  color: hsl(0, 0%, 98%);
+  margin-right: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  height: 30px;
+  line-height: 15px;
+}
+#page #sec2 .articles .article div h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+  margin-bottom: 15px;
+}
+#page #sec3 {
+  margin-bottom: 30px;
+}
+#page #sec3 h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+  text-align: center;
+  margin-bottom: 35px;
+}
+#page #sec3 .people {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 375px) {
+  #page #sec3 .people {
+    display: block;
+  }
+}
+#page #sec3 .people .person {
+  position: relative;
+  background-color: hsl(0, 0%, 98%);
+  width: 24%;
+  text-align: center;
+  border-radius: 3px;
+  padding: 30px 10px 10px 10px;
+}
+@media screen and (max-width: 375px) {
+  #page #sec3 .people .person {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #page #sec3 .people .person.two,
+  #page #sec3 .people .person.three,
+  #page #sec3 .people .person.four {
+    display: none;
+  }
+}
+#page #sec3 .people .person img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -17px;
+}
+#page #sec3 .people .person h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+  margin-bottom: 10px;
+}
+#page #sec3 .btns {
+  margin-bottom: 15px;
+  text-align: center;
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  #page #sec3 .btns {
+    display: block;
+  }
+}
+#page #sec3 .btns .btn {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid hsl(12, 88%, 59%);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+@media screen and (max-width: 375px) {
+  #page #sec3 .btns .btn {
+    cursor: pointer;
+  }
+}
+#page #sec3 .btns .btn:first-child {
+  background-color: hsl(12, 88%, 59%);
+}
+#page #sec3 .btns .btn:last-child {
+  margin-right: 0;
+}
+
+#page #sec3 .start {
+  text-align: center;
+}
+#page footer {
+  background-color: hsl(0, 0%, 0%);
+  padding-bottom: 15px;
+  position: relative;
+}
+#page footer .up {
+  background-color: hsl(12, 88%, 59%);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 375px) {
+  #page footer .up {
+    display: block;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  #page footer .up h1 {
+    width: 100%;
+  }
+}
+#page footer .up h1 {
+  width: 35%;
+  color: hsl(0, 0%, 98%);
+  font-size: 20px;
+  font-weight: 700;
+}
+@media screen and (max-width: 375px) {
+  #page footer .up h1 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+#page footer .up .start button {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(12, 88%, 59%);
+}
+#page footer .up .start button {
+  color: hsl(12, 88%, 59%, 0.7);
+}
+#page footer .down {
+  padding: 20px 0 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  #page footer .down {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    text-align: center;
+  }
+}
+#page footer .down > div {
+  width: 33%;
+}
+@media screen and (max-width: 375px) {
+  #page footer .down > div {
+    width: 100%;
+  }
+}
+/*
+i get tothis point
+
+*/
+#page footer .down .social-media .logo {
+  position: relative;
+}
+@media screen and (max-width: 375px) {
+  #page footer .down .social-media {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    box-ordinal-group: 3;
+  }
+}
+@media screen and (max-width: 375px) {
+  #page footer .down .social-media .logo {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    text-align: center;
+  }
+}
+#page footer .down .social-media .logo span {
+  position: absolute;
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 700;
+  top: -20px;
+  left: 22px;
+  color: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 375px) {
+  #page footer .down .social-media .logo span {
+    left: 116px;
+  }
+}
+#page footer .down .social-media .social {
+  margin-left: 15px;
+}
+@media screen and (max-width: 375px) {
+  #page footer .down .social-media .social {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+}
+#page footer .down .social-media .social a {
+  margin-right: 8px;
+}
+#page footer .down .social-media .social a:last-child {
+  margin-right: 0px;
+}
+#page footer .down .social-media .social a i {
+  color: hsl(0, 0%, 100%);
+}
+#page footer .down .social-media .social a:hover i {
+  color: hsl(12, 88%, 59%);
+}
+#page footer .down .links {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  #page footer .down .links {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    padding: 20px;
+    margin-bottom: 15px;
+    justify-content: space-around;
+  }
+}
+#page footer .down .links ul li a {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(227, 12%, 61%);
+}
+
+#page footer .down .links ul li a:hover {
+  color: hsl(12, 88%, 59%);
+}
+#page footer .down .copy {
+  margin-left: 20px;
+}
+@media screen and (max-width: 375px) {
+  #page footer .down .copy {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    margin-left: 0;
+  }
+}
+#page footer .down .copy form input {
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+}
+#page footer .down .copy form #email {
+  color: hsl(12, 88%, 59%);
+  border: 1px solid hsl(12, 88%, 59%);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+#page footer .down .copy form #submit {
+  background-color: hsl(12, 88%, 59%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+#page footer .down .copy form #submit:hover {
+  background-color: hsl(12, 88%, 59%, 0.7);
+}
+#page footer .down .copy form .error {
+  font-size: 11px;
+  font-weight: 400;
+  color: hsl(12, 88%, 59%);
+  margin-left: 10px;
+  margin-bottom: 10px;
+  opacity: 0;
+}
+#page footer .copy-right {
+  font-size: 10px;
+  font-weight: 500;
+  color: hsl(227, 12%, 61%);
+  text-align: center;
+  position: absolute;
+  right: 24px;
+  bottom: 30px;
+}
+@media screen and (max-width: 375px) {
+  #page footer .copy-right {
+    position: unset;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
