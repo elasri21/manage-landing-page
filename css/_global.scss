@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-size: $body-size;
+    font-family: $family;
+}
+a, button {
+    transition: all .3s ease-in-out;
+}
+section {
+    padding: 30px 50px;
+}

@@ -1,15 +1,13 @@
 //
 $(document).ready(function(){
-const closeBtn = document.querySelector('.close button')
-const openBtn = document.querySelector('.open button')
-const mobileNav = document.querySelector('.mobile-nav')
+    const closeBtn = document.querySelector('.close')
+const openBtn = document.querySelector('.open')
+const mobileNav = document.querySelector('nav')
 openBtn.addEventListener('click', function(){
-this.style.display = 'none'
-closeBtn.style.display = 'block'
+$(this).css({display: "none"})
 mobileNav.style.display = 'block'
 })
 closeBtn.addEventListener('click', function(){
-    this.style.display = 'none'
     openBtn.style.display = 'block'
     mobileNav.style.display = 'none'
 })
@@ -20,9 +18,9 @@ for(let i=0; i<btns.length; i++){
         $('.btn').css({backgroundColor: 'hsl(0, 0%, 100%)'})
         $(this).css({backgroundColor: 'hsl(12, 88%, 59%)'})
         for(let j=0;j<people.length; j++){
-            people[j].style.display = 'none'
+            people[j].style.display = 'none';
             if(j===i){
-                people[j].style.display = 'block'
+                people[j].style.display = 'block';
             }
         }
 
@@ -37,10 +35,10 @@ form.addEventListener('submit', function(e){
         e.preventDefault()
         error.style.opacity = '1'
     }
-})
+});
 field.addEventListener('focus', function(){
     error.style.opacity = '0'
-})
+});
 })
 
 

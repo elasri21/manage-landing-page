@@ -1,0 +1,177 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+        width: 45%;
+        img {
+            width: 100%;
+        }
+    }
+    h1, h2, h3 {
+        font-weight: 700;
+        color: $title-color;
+        margin-bottom: 20px;
+        &.h1 {
+            font-size: 30px;
+        }
+    }
+    p {
+        color: $text-color;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    @media #{$small-screen} {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &#sec1 {
+        @media #{$mobile} {
+            flex-wrap: wrap;
+            & > div {
+                width: 100%;
+            }
+            .greeding {
+                order: 2;
+                text-align: center;
+            }
+            .illus {
+                order: 1;
+            }
+        }
+    }
+    &#sec2 {
+        .articles {
+            article {
+                display: flex;
+                .rank {
+                    padding: 6px 15px;
+                    background-color: $btn-bg;
+                    color: $btn-text;
+                    border-radius: 20px;
+                    width: fit-content;
+                    height: fit-content;
+                    margin-right: 20px;
+                }
+
+            }
+        }
+        @media #{$mobile} {
+            display: block;
+            .disc {
+                text-align: center;
+            }
+            .articles {
+                article {
+                    .more-info {
+                        p {
+                            margin-left: -68px;
+                        }
+                    }
+                    
+                }
+            }
+            & > div {
+                width: 100%;
+            }
+        }
+    }
+    &#sec3 {
+        display: block;
+        text-align: center;
+        padding: 30px;
+        h2 {
+            margin-bottom: 50px;
+        }
+        .people {
+            width: 100% !important;
+            display: flex;
+            justify-content: space-between;
+            .person {
+                width: 30%;
+                position: relative;
+                background-color: $btn-text;
+                padding: 50px 20px;
+                text-align: center;
+                border-radius: 4px;
+                img {
+                    position: absolute;
+                    top: -30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+                h3 {
+                    font-size: 18px;
+                }
+                &.four {
+                    display: none;
+                }
+            }
+        }
+        .start {
+            width: 100%  !important;
+            text-align: center;
+            margin-top: 30px;
+        }
+        @media #{$mobile} {
+            .people {
+                display: block;
+                .person {
+                    width: 100%;
+                    display: none;
+                    &.one {
+                        display: block;
+                    }
+                }
+            }
+            .slide-btns {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+                span {
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    margin-right: 4px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    background-color: $white;
+                    border: 1px solid $btn-bg;
+                    &.first {
+                        background-color: $btn-bg;
+                    }
+                }
+            }
+
+        }
+
+    }
+    &#sec4 {
+        background-color: $btn-bg;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            color: $white;
+            width: fit-content;
+        }
+        .start {
+            width: fit-content;
+        }
+        @media #{$mobile} {
+            display: block;
+            text-align: center;
+            h2, .start {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+
+
+}

@@ -1,0 +1,22 @@
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    background-color: $btn-bg;
+    color: $btn-text;
+    border-radius: 20px;
+    font-size: .9em;
+    font-family: 500;
+    text-transform: capitalize;
+    word-spacing: 2px;
+    &:hover {
+        opacity: .6;
+    }
+    &.last-btn {
+        background-color: $btn-text;
+        color: $btn-bg;
+        border: 1px solid $btn-bg;
+    }
+}
