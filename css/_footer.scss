@@ -1,11 +1,46 @@
 footer {
-    padding: 30px 50px;
+    @media #{$small-screen} {
+        padding: 30px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > div {
+            width: 33%;
+        }
+    }
+    @media #{$mobile} {
+        flex-wrap: wrap;
+        position: relative;
+        .social-media {
+            width: 100%;
+            order: 3;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .logo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .links {
+            width: 100%;
+            order: 2;
+        }
+        .copy {
+            text-align: center;
+            width: 100%;
+            order: 1;
+            .copy-right {
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    padding: 20px 20px;
     background-color: $footer-bg;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     .social-media {
-        width: 200px;
         .logo {
             position: relative;
             width: fit-content;
@@ -32,10 +67,12 @@ footer {
         }
     }
     .links {
-        width: calc((100% -200px) / 2);
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         ul {
+            &.first-links {
+                margin-right: 25px;
+            }
             li {
                 margin-bottom: 10px;
                 a {
@@ -48,7 +85,6 @@ footer {
         }
     }
     .copy {
-        width: calc((100% -200px) / 2);
         text-align: right;
         form {
             input {
@@ -58,6 +94,7 @@ footer {
                 padding: 8px 12px;
                 border-radius: 20px;
                 &#email {
+                    width: calc(100% - 60px);
                     border: 1px solid $text-color;
                     background-color: $white;
                     margin-bottom: 5px;
@@ -90,38 +127,11 @@ footer {
             text-align: center;
         }
     }
-    @media #{$small-screen} {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    @media #{$mobile} {
-        flex-wrap: wrap;
-        position: relative;
-        .social-media {
-            width: 100%;
-            order: 3;
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            .logo {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-        .links {
-            width: 100%;
-            order: 2;
-        }
-        .copy {
-            text-align: center;
-            width: 100%;
-            order: 1;
-            .copy-right {
-                position: absolute;
-                bottom: 15px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
+}
+.attribution {
+    text-align: center;
+    font-size: 11px;
+    a {
+        color: hsl(228, 45%, 44%);
     }
 }

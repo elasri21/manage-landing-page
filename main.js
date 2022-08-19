@@ -4,13 +4,15 @@ $(document).ready(function(){
     const openBtn = document.querySelector('.open');
     const mobileNav = document.querySelector('nav');
     openBtn.addEventListener('click', function(){
-    $(this).css({display: "none"})
-    mobileNav.style.display = 'block'
-    })
+        this.style.display = "none";
+        mobileNav.style.display = 'block';
+        closeBtn.style.display = "block";
+    });
     closeBtn.addEventListener('click', function(){
+        this.style.display = "none";
+        mobileNav.style.display = 'none';
         openBtn.style.display = 'block'
-        mobileNav.style.display = 'none'
-    })
+    });
     let btns = $('.btn')
     let people = document.querySelectorAll('.people .person')
     for(let i=0; i<btns.length; i++){

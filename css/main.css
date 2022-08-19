@@ -44,23 +44,64 @@ button.last-btn {
 }
 
 header {
-  padding: 30px 50px;
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
 }
-header .open {
+@media (min-width: 768px) {
+  header {
+    padding: 30px 50px;
+  }
+  header nav {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 200px);
+  }
+  header nav ul {
+    display: flex;
+  }
+  header nav ul li {
+    margin-right: 20px;
+  }
+  header .open {
+    display: none !important;
+    cursor: pointer;
+  }
+}
+@media (max-width: 767px) {
+  header nav {
+    width: 95%;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+  }
+  header nav ul {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border-radius: 4px;
+  }
+  header nav ul li {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  header nav ul li a {
+    display: block;
+    width: 100%;
+  }
+  header nav .start {
+    display: none;
+  }
+}
+header nav {
   display: none;
-  cursor: pointer;
-}
-header nav .close {
-  display: none;
-  cursor: pointer;
-}
-header nav ul {
-  display: flex;
-}
-header nav ul li {
-  margin-right: 10px;
 }
 header nav ul li a {
   font-size: .9em;
@@ -71,56 +112,12 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #9095a7;
 }
-@media (max-width: 400px) {
-  header {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+header .open {
+  cursor: pointer;
 }
-@media (max-width: 767px) {
-  header .open {
-    display: block;
-  }
-  header nav {
-    display: none;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  header nav .close {
-    display: block !important;
-    position: absolute;
-    right: 53px;
-    top: 30px;
-  }
-  header nav ul {
-    display: block !important;
-    max-width: 300px;
-    padding: 30px;
-    position: absolute;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    width: 100%;
-    text-align: center;
-    border-radius: 4px;
-  }
-  header nav ul li {
-    margin-right: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  header nav ul li a {
-    display: block;
-    width: 100%;
-  }
-  header .start {
-    display: none;
-  }
+header .close {
+  display: none;
+  cursor: pointer;
 }
 
 section {
@@ -147,7 +144,7 @@ section p {
   font-weight: 400;
   margin-bottom: 20px;
 }
-@media (max-width: 400px) {
+@media (min-width: 768px) {
   section {
     padding-left: 15px;
     padding-right: 15px;
@@ -291,95 +288,18 @@ section#sec4 .start {
 }
 
 footer {
-  padding: 30px 50px;
+  padding: 20px 20px;
   background-color: #1d1e25;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-footer .social-media {
-  width: 200px;
-}
-footer .social-media .logo {
-  position: relative;
-  width: fit-content;
-  margin-bottom: 30px;
-}
-footer .social-media .logo span {
-  display: block;
-  font-size: 34px;
-  color: white;
-  position: absolute;
-  top: -15px;
-  left: 25px;
-}
-footer .social-media .social {
-  text-align: center;
-}
-footer .social-media .social a {
-  margin-right: 10px;
-  color: white;
-}
-footer .social-media .social a:hover {
-  color: #f25f3a;
-}
-footer .links {
-  width: calc((100% -200px) / 2);
-  display: flex;
-  justify-content: space-evenly;
-}
-footer .links ul li {
-  margin-bottom: 10px;
-}
-footer .links ul li a {
-  color: #9095a7;
-}
-footer .links ul li a:hover {
-  color: #f25f3a;
-}
-footer .copy {
-  width: calc((100% -200px) / 2);
-  text-align: right;
-}
-footer .copy form input {
-  background: none;
-  border: none;
-  outline: none;
-  padding: 8px 12px;
-  border-radius: 20px;
-}
-footer .copy form input#email {
-  border: 1px solid #9095a7;
-  background-color: white;
-  margin-bottom: 5px;
-}
-footer .copy form input#email:focus {
-  border-color: #f25f3a;
-  color: #f25f3a;
-}
-footer .copy form input#submit {
-  cursor: pointer;
-  background-color: #f25f3a;
-  color: white;
-}
-footer .copy form input#submit:hover {
-  opacity: .6;
-}
-footer .copy form .error {
-  color: #f25f3a;
-  font-size: 10px;
-  opacity: 0;
-  margin-bottom: 15px;
-}
-footer .copy .copy-right {
-  color: #9095a7;
-  font-size: 12px;
-  text-align: center;
-}
-@media (max-width: 400px) {
+@media (min-width: 768px) {
   footer {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer > div {
+    width: 33%;
   }
 }
 @media (max-width: 767px) {
@@ -413,6 +333,92 @@ footer .copy .copy-right {
     left: 50%;
     transform: translateX(-50%);
   }
+}
+footer .social-media .logo {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+footer .social-media .logo span {
+  display: block;
+  font-size: 34px;
+  color: white;
+  position: absolute;
+  top: -15px;
+  left: 25px;
+}
+footer .social-media .social {
+  text-align: center;
+}
+footer .social-media .social a {
+  margin-right: 10px;
+  color: white;
+}
+footer .social-media .social a:hover {
+  color: #f25f3a;
+}
+footer .links {
+  display: flex;
+  justify-content: center;
+}
+footer .links ul.first-links {
+  margin-right: 25px;
+}
+footer .links ul li {
+  margin-bottom: 10px;
+}
+footer .links ul li a {
+  color: #9095a7;
+}
+footer .links ul li a:hover {
+  color: #f25f3a;
+}
+footer .copy {
+  text-align: right;
+}
+footer .copy form input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+footer .copy form input#email {
+  width: calc(100% - 60px);
+  border: 1px solid #9095a7;
+  background-color: white;
+  margin-bottom: 5px;
+}
+footer .copy form input#email:focus {
+  border-color: #f25f3a;
+  color: #f25f3a;
+}
+footer .copy form input#submit {
+  cursor: pointer;
+  background-color: #f25f3a;
+  color: white;
+}
+footer .copy form input#submit:hover {
+  opacity: .6;
+}
+footer .copy form .error {
+  color: #f25f3a;
+  font-size: 10px;
+  opacity: 0;
+  margin-bottom: 15px;
+}
+footer .copy .copy-right {
+  color: #9095a7;
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 11px;
+}
+.attribution a {
+  color: #3e52a3;
 }
 
 /*# sourceMappingURL=main.css.map */
